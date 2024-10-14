@@ -1,0 +1,297 @@
+    2  which python
+    3  which python3
+    4  exit
+    5  which conda
+    6  which microconda
+    7  which micromamba
+    8  vi .zshrc
+    9  alias
+   10  which conda
+   11  which micromamba
+   12  which mamba
+   13  ls
+   14  vi .zshrc
+   15  mamba shell reinit
+   16  ls
+   17  cd mamba
+   18  ls
+   19  cd ..
+   20  ls
+   21  exit
+   22  cd /bin/
+   23  ls
+   24  ls -l
+   25  ls -lt
+   26  ls -lt | head
+   27  date ; sleep 2 ; date
+   28  man sleep
+   29  man sleep
+   30  cd ~\n\ncurl -O https://raw.githubusercontent.com/prog4biol/pfb2024/master/files/cuffdiff.txt
+   31  cd ~\ngrep Chr7 cuffdiff.txt > fav_chr_cuffdiff.txt
+   32  ls
+   33  grep Chr9 cuffdiff.txt >> fav_chr_cuffdiff.txt
+   34  cat -tail fav_chr_cuffdiff.txt
+   35  cat --tail fav_chr_cuffdiff.txt
+   36  cat -t fav_chr_cuffdiff.txt
+   37  cat fav_chr_cuffdiff.txt | -t 5
+   38  cat fav_chr_cuffdiff.txt | tail 5
+   40  tail -5 fav_chr_cuffdiff.txt
+   41  cat blablabla.txt
+   42  cat blablabla.txt 2> errors.txt
+   43  cat blablabla.txt > errors.txt
+   44  cat errors.txt
+   45  head errors.txt
+   46  ls
+   47  cat blablabla.txt 2> errors.txt
+   48  head errors.txt
+   49  # just print it to the terminal first\ncat fav_chr_cuffdiff.txt blablabla.file\n\n# redirect to two files, STDOUT to out.txt, STDERR to err.txt \ncat fav_chr_cuffdiff.txt blablabla.file 1> out.txt 2> err.txt\n\n# this does the same, do you see the difference?\ncat fav_chr_cuffdiff.txt blablabla.file > out.txt 2> err.txt\n\n
+   50  # just print it to the terminal first\ncat fav_chr_cuffdiff.txt blablabla.file
+   51  cat fav_chr_cuffdiff.txt blablabla.file
+   52  cat fav_chr_cuffdiff.txt blablabla.file &> all_out_err.txt
+   53  head all_out_err.txt
+   54  tai all_out_err.txt
+   55  tail all_out_err.txt
+   56  ~
+   57  cd ~
+   58  path
+   59  pwd
+   60  ../
+   61  ..
+   62  .
+   63  pwd
+   64  ../
+   65  cd ../
+   66  ls
+   67  ls -aF
+   68  cd ~
+   69  mkdir PFB_problemsets
+   70  pwd
+   71  ls
+   72  cd ./PFB_problemsets
+   73  pwd
+   74  curl -o https://raw.githubusercontent.com/prog4biol/pfb2024/master/files/sequences.nt.fa
+   75  curl -O  https://raw.githubusercontent.com/prog4biol/pfb2024/master/files/sequences.nt.fa
+   76  ls
+   77  wc -l  sequences.nt.fa
+   78  wc -c sequences.nt.fa
+   79  head -1 sequences.nt.fa
+   80  tail -3 sequences.nt.fa
+   81  grep > | wc -c
+   82  grep > sequences.nt.fa | wc -c
+   83  grep > sequences.nt.fa | wc
+   84  grep ' >'  sequences.nt.fa | wc
+   85  curl -O  https://raw.githubusercontent.com/prog4biol/pfb2024/master/files/sequences.nt.fa
+   86  grep ' >'  sequences.nt.fa | wc
+   87  ls
+   88  head sequences.nt.fa
+   89  grep ' >' sequences.nt.fa | wc
+   90  head sequences.nt.fa
+   91  cat sequences.nt.fa
+   92  grep '>' sequences.nt.fa | wc
+   93  man mv
+   94  mv sequences.nt.fa cancer_genes.fasta
+   95  ls
+   96  curl -O https://raw.githubusercontent.com/prog4biol/pfb2024/master/files/cuffdiff.txt
+   97  cuffdiff.txt
+   98  head cuffdiff.txt
+   99  man sort
+  100  head cuffdiff.txt -1
+  101  sort -k 10 cuffdiff.txt 
+  102  sort -k 10 cuffdiff.txt > sorted.cuffdiff.out
+  103  ls
+  104  head -10 sorted.cuffdiff.out
+  105  man sort
+  106  sort -k 10 -r cuffdiff.txt > sorted.cuffdiff.out
+  107  head sorted.cuffdiff.out
+  108  head sorted.cuffdiff.out | column
+  109  awk '{print $10}' sorted.cuffdiff.out
+  110  awk '{print $10}' sorted.cuffdiff.out | head
+  111  awk '{print $10}' sorted.cuffdiff.out | tail
+  112  awk '{print $10}' sorted.cuffdiff.out | less
+  113  head -100 sorted.cuffdiff.out > top100.sorted.cuffdiff.out
+  114  head top100.sorted.cuffdiff.out
+  115  awk '{print $10}' top.sorted.cuffdiff.out | head -10
+  116  ls
+  117  awk '{print $10}' top.100.sorted.cuffdiff.out | head -10
+  118  awk '{print $10}' top100.sorted.cuffdiff.out | head -10
+  119  awk '{print $1}' top100.sorted.cuffdiff.out > differentially.expressed.genes.txt
+  120  head differentially.expressed.genes.txt
+  121  awk '{print $10}' sorted.cuffdiff.out | less
+  122  sort -k 10 -r -n cuffdiff.txt > posvalues.sorted.cuffdiff.out
+  123  awk '{print $10}' posvalues.sorted.cuffdiff.out | less
+  124  grep -1.79769e+308 posvalues.sorted.cuffdiff.out | wc
+  125  grep -1.79769e+308 posvalues.sorted.cuffdiff.out | wc -l
+  126  grep -1.79769e+308 posvalues.sorted.cuffdiff.out
+  127  grep '-1.79769e+308' posvalues.sorted.cuffdiff.out
+  128  grep '-1.79769e+308' posvalues.sorted.cuffdiff.out
+  129  grep '1.79769e+308' posvalues.sorted.cuffdiff.out
+  130  grep "-1.79769e+308" posvalues.sorted.cuffdiff.out
+  131  grep "/-1.79769e+308" posvalues.sorted.cuffdiff.out
+  132  grep "\-1.79769e+308" posvalues.sorted.cuffdiff.out
+  133  grep "\-1.79769e+308" posvalues.sorted.cuffdiff.out | wc -l
+  134  grep "\1.79769e+308" posvalues.sorted.cuffdiff.out | wc -l
+  135  grep "1.79769e+308" posvalues.sorted.cuffdiff.out | wc -l
+  136  calc 762-445
+  137  ls
+  138  ls -l
+  139  cd ../
+  140  ls -l
+  141  ls -lF
+  142  vim ~/.zshrc
+  143  ls
+  144  vi first_vi_file.txt
+  145  ssh-keygen -t ed25519 -C "ts5103@princeton.edu"
+  146  eval "$(ssh-agent -s)"
+  147  open~/.ssh/config
+  148  touch ~/.ssh/config
+  149  vi ~/.ssh/config
+  150  cat ~/.ssh/id_ed25519.pb
+  151  ls
+  152  cat ~/.ssh/id_ed25519.pub
+  153  cd ~ \nmkdir PFB_problemsets
+  154  ls
+  155  cd ./PFB_problemsets
+  156  ls
+  157  cd ../
+  158  pwd
+  159  ls
+  160  cd ./PFB_problemsets
+  161  echo "# PFB_problemsets" >> README.md\ngit init\ngit add README.md\ngit commit -m "first commit"\ngit branch -M main\ngit remote add origin https://github.com/tsmosquito/PFB_problemsets.git\ngit push -u origin main
+  162  ls
+  163  echo "# PFB_problemsets" >> README.md\ngit init\ngit add README.md\ngit commit -m "first commit"\ngit branch -M main\ngit remote add origin git@github.com:tsmosquito/PFB_problemsets.git\ngit push -u origin main
+  164  echo "# PFB_problemsets" >> README.md\ngit init\ngit add README.md\ngit commit -m "first commit"\ngit branch -M main\ngit remote add origin git@github.com:tsmosquito/PFB_problemsets.git\ngit push -u origin main
+  165  echo "# PFB_problemsets" >> README.md\ngit init\ngit add README.md\ngit commit -m "first commit"\ngit branch -M main\ngit remote add origin git@github.com:tsmosquito/PFB_problemsets.git\ngit push -u origin main
+  166  echo "# PFB_problemsets" >> README.md\ngit init\ngit add README.md\ngit commit -m "first commit"\ngit branch -M main\ngit remote add origin git@github.com:tsmosquito/PFB_problemsets.git\ngit push -u origin main
+  167  echo "# PFB_problemsets" >> README.md\ngit init\ngit add README.md\ngit commit -m "first commit"\ngit branch -M main\ngit remote add origin git@github.com:tsmosquito/PFB_problemsets.git\ngit push -u origin main
+  168  echo "# PFB_problemsets" >> README.md\ngit init\ngit add README.md\ngit commit -m "first commit"\ngit branch -M main\ngit remote set-url origin git@github.com:tsmosquito/PFB_problemsets.git\ngit push -u origin main
+  169  echo "# PFB_problemsets" >> README.md\ngit init\ngit add README.md\ngit commit -m "first commit"\ngit branch -M main\ngit remote set-url origin git@github.com:tsmosquito/PFB_problemsets.git\ngit push -u origin main
+  170  echo "# PFB_problemsets" >> README.md\ngit init\ngit add README.md\ngit commit -m "first commit"\ngit branch -M main\ngit remote set-url origin git@github.com:tsmosquito/PFB_problemsets.git\ngit push -u origin main
+  171  vi README.md
+  172  git add README.md
+  173  git commit -m 'Cleaned up nonsense'
+  174  git push origin main
+  175  pwd
+  176  vi git_exercises.txt
+  177  git add git_exercises.txt
+  178  git commit -m 'added a line of text'
+  179  git push origin main
+  180  git status
+  181  git add *
+  182  git commit -m 'added several files'
+  183  git push origin main
+  184  cd ./
+  185  cd ../
+  186  git clone git@github.com:prog4biol/pfb2024.git
+  187  ls
+  188  cd pfb2024
+  189  ls
+  190  git pull
+  191  cd ../
+  192  ls
+  193  cd PFB_problemsets
+  194  mkdir Unix01
+  195  ls
+  196  cd ../
+  197  ls
+  198  cd PFB_problemsets
+  199  mv Unix01 files
+  200  ls
+  201  mv *.txt files
+  202  ls
+  203  cd /files
+  204  ls
+  205  cd ./files
+  206  ls
+  207  cd ../
+  208  cd ../
+  209  ls
+  210  mv *.txt ./PFB_problemsets/files
+  211  ls
+  212  cd ./PFB_
+  213  cd ./PFB_problemsets
+  214  ls
+  215  mv *.out files
+  216  ls
+  217  mv cancer_genes.fasta files
+  218  ls
+  219  cd ./files
+  220  ls
+  221  git status
+  222  git add -A
+  223  git status
+  224  git commit -a -m files
+  225  git status
+  226  git push
+  227  git status
+  228  vi mysequences.txt
+  229  git status
+  230  add mysequences.txt
+  231  git add mysequences.txt
+  232  git status
+  233  git commit -m files
+  234  git status
+  235  git push
+  236  cd ../
+  237  ls
+  238  mkdir fasta
+  239  ls
+  240  cd files
+  241  ls
+  242  mv cancer_genes.fasta ../fasta
+  243  ls
+  244  cd ../
+  245  ls
+  246  cd fasta
+  247  ls
+  248  git status
+  249  git add -a
+  250  git add -A
+  251  git status
+  252  git commit -a
+  253  git status
+  254  git push
+  255  vi oopsies
+  256  git add oopsies
+  257  git commit -m oopsies
+  258  git status
+  259  git push
+  260  git rm oopsies
+  261  git commit -m 'removing oopsies'
+  262  git push
+  263  vi oops2
+  264  add oops2
+  265  git add oops2
+  266  git commit -m oops2 "adding a mistake"
+  267  git commit -m oops2 'adding a mistake'
+  268  git status
+  269  git commit -m
+  270  git commit -m oops2
+  271  git push
+  272  git status
+  273  rm oops2
+  274  git add oops2
+  275  git commit -m 'removing oops2'
+  276  git push
+  277  mv never.txt
+  278  touch never.txt
+  279  git add never.txt
+  280  git status
+  281  git reset never
+  282  git rest nevr.txt
+  283  git reset never.txt
+  284  rm never.txt
+  285  man rm
+  286  man cp
+  287  man rm
+  288  man cp
+  289  history
+  290  history > unixBasics.history.txt
+  291  ls
+  292  mv unixBasics.history.txt ../
+  293  ls
+  294  cd ../
+  295  ls
+  296  vi unixBasics.history.txt
+  297  history -A
+  298  hsitory -a
+  299  history -a
