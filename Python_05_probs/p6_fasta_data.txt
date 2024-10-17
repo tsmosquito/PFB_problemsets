@@ -1,0 +1,1 @@
+The number of lines is 120. The number of characters is 7919. The average line length is 65.99166666666666
