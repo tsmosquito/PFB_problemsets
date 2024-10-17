@@ -1,0 +1,7 @@
+#!/usr/bin/env python3
+
+seq_list = ['ATGCCCGGCCCGGC','GCGTGCTAGCAATACGATAAACCGG', 'ATATATATCGAT','ATGGGCCC']
+
+for seq in seq_list :
+    position = seq_list.index(seq) + 1
+    print(f"{len(seq)}\t{seq:30}\t{position}")
