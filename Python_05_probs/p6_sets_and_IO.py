@@ -69,7 +69,7 @@
 #     line_caps = line.upper()
 #     text_file_write.write(f"{line_caps}\n")
 
-#problem 7
+# problem 7
 
 # seq_dict = {} #make empty dictionary
 
@@ -100,20 +100,32 @@
 
 #problem 9
 
-fasta_dict = {} #make empty dictionary
-fasta_key = '' #make empty variable for keys
-fasta_seq = '' #make empty variable for sequences
+# fasta_dict = {} #make empty dictionary
+# fasta_key = '' #make empty variable for keys
+# fasta_seq = '' #make empty variable for sequences
 
-with open("p6.fasta","r") as string_obj, open("p6_parsed.txt","w") as string_write:
-    for line in string_obj: #divides string obj into lines, the default sub-unit
-        line = line.rstrip('\n')
-        if '>' in line : #search for >, the symbol for fasta headers
-            fasta_dict[line] = '' #is header, make key
-            fasta_key = line #save key so it doesn't go away after each loop
-        elif 'A' in line or 'T' in line or 'G' in line or 'C' in line :
-            fasta_dict[fasta_key] += line #is sequence make value
-        else: 
-            "Alarum and alarm!! This isn't a header or a sequence line!"
-    string_write.write(f"{fasta_dict}")
+# with open("p6.fasta","r") as string_obj, open("p6_parsed.txt","w") as string_write:
+#     for line in string_obj: #divides string obj into lines, the default sub-unit
+#         line = line.rstrip()
+#         if line.startswith('>') : #search for >, the symbol for fasta headers
+#             fasta_dict[line] = '' #is header, make key
+#             fasta_key = line #save key so it doesn't go away after each loop
+#         elif line.startswith(('A', 'C', 'T', 'G')) : 
+#             fasta_dict[fasta_key] += line #is sequence make value
+#         else: 
+#             "Alarum and alarm!! This isn't a header or a sequence line!"
+#     for fasta_key in fasta_dict :
+#         print(f"{fasta_key}\t{fasta_dict[fasta_key]}\n") #for key in dictionary, f-string that says write key, write value (might need to add a new line character)
+#         string_write.write(f"{fasta_key}\t{fasta_dict[fasta_key]}\n")
 
-        
+#problem 10
+
+all_genes_set = set()
+#make more sets
+
+with open("ferret_all_genes.tsv") as all_fer_genes_fh, open("ferret_pigmentation_genes.tsv") as pigment_fer_genes_fh, open("ferret_stemcellproliferation_genes.tsv") as stemcell_fer_genes_fh :
+    for line_num, line in enumerate(all_fer_genes_fh) :
+        if line_num > 0 :
+            all_genes_set.add(line.rstrip())
+    print(all_genes_set)
+#this makes a set with all the genes exactly as you expect it; now do this with the other genes.
